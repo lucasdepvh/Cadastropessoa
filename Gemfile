@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.1.6'
 gem 'materialize-sass', '~> 0.100.2'
 gem 'rails-i18n', '~> 5.1', '>= 5.1.1'
+gem 'bootstrap', '~> 4.1', '>= 4.1.1'
+gem 'jquery-rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
