@@ -1,56 +1,71 @@
-<p id="notice">
-  <%= notice %>
-</p>
-
+<br>
 <div class="basic-grey">
+  <div class="row">
+    <div class="col-md-12">
+      <h3><strong>Contatos</strong></h3>
+      <div class="panel panel-flat">
+        <div class="panel-heading">
+          <% if notice %>
+            <p class="alert alert-success alert-styled-left alert-arrow-left alert-bordered">
+              <button class="close" type="button" data-dismiss="alert">×</button>
+              <%= notice %>
+            </p>
+            <% end %>
+              <% if alert %>
+                <p class="alert alert-danger alert-styled-left alert-arrow-left alert-bordered">
+                  <button class="close" type="button" data-dismiss="alert">×</button>
+                  <%= alert %>
+                </p>
+                <% end %>
+        </div>
 
-  <h1>Contatos</h1>
-  <%= link_to 'Novo', new_contact_path %>
-    <table class="table">
-      <thead>
-        <tr>
-         <th>
-            <%= @contacts.model.human_attribute_name("id") %>
-          </th>
-          <th>
-            <%= @contacts.model.human_attribute_name("name") %>
-          </th>
-          <th>
-            <%= @contacts.model.human_attribute_name("kind") %>
-          </th>
-          <th class="text-center">Ação</th>
-        </tr>
-      </thead>
+        <%= link_to 'Novo', new_contact_path %>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  <%= @contacts.model.human_attribute_name("id") %>
+                </th>
+                <th>
+                  <%= @contacts.model.human_attribute_name("name") %>
+                </th>
+                <th>
+                  <%= @contacts.model.human_attribute_name("kind") %>
+                </th>
+                <th class="text-center">Ação</th>
+              </tr>
+            </thead>
 
-      <tbody>
-        <% @contacts.each do |contact| %>
-          <tr style="background: <%= cycle('white', '#f0f0f5') %>">
-            <td>
-            <%=contact.id%>
-            </td>
-              <td>
-              <%= contact.name %>
-            </td>
-            <td>
-              <%= contact.kind.description %>
-            </td>
-            <td class="text-center">
-              <%= link_to t('buttons.show'), contact %>
-                <%= link_to t('buttons.edit'), edit_contact_path(contact) %>
-                  <%= link_to t('buttons.destroy'), contact, method: :delete, data: { confirm: t('messages.confirm') } %>
-            </td>
-          </tr>
+            <tbody>
+              <% @contacts.each do |contact| %>
+                <tr style="background: <%= cycle('white', '#f0f0f5') %>">
+                  <td>
+                    <%=contact.id%>
+                  </td>
+                  <td>
+                    <%= contact.name %>
+                  </td>
+                  <td>
+                    <%= contact.kind.description %>
+                  </td>
+                  <td class="text-center">
+                    <%= link_to t('buttons.show'), contact %>
+                      <%= link_to t('buttons.edit'), edit_contact_path(contact) %>
+                        <%= link_to t('buttons.destroy'), contact, method: :delete, data: { confirm: t('messages.confirm') } %>
+                  </td>
+                </tr>
 
-          <% end %>
-      </tbody>
-
-    </table>
-    <br>
-
-    <div class="panel-footer text-right">
-      <div class="dataTables_paginate paging_simple_numbers pull-left">
-        <%= paginate @contacts %>
+                <% end %>
+            </tbody>
       </div>
-      <%= page_entries_info @contacts %>
     </div>
+  </div>
+  </table>
+
+  <div class="panel-footer text-right">
+    <div class="dataTables_paginate paging_simple_numbers pull-left">
+      <%= paginate @contacts %>
+    </div>
+    <%= page_entries_info @contacts %>
+  </div>
 </div>
