@@ -1,15 +1,32 @@
-
 /* Basic Grey */
+a {
+    color: #888;
+}
+
+table {
+    width: 100%;
+}
 .basic-grey {
     margin-left:auto;
     margin-right:auto;
     max-width: 500px;
-    background: white;
+    background: #F7F7F7;
     padding: 25px 15px 25px 10px;
     font: 12px Georgia, "Times New Roman", Times, serif;
     color: #888;
     text-shadow: 1px 1px 1px #FFF;
-    border:1px solid black;
+    border:1px solid #E4E4E4;
+}
+.basic-greyedit {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 500px;
+    background: #F7F7F7;
+    padding: 25px 15px 25px 10px;
+    font: 15px Georgia, "Times New Roman", Times, serif;
+    color: #888;
+    text-shadow: 1px 1px 1px #FFF;
+    border:1px solid #E4E4E4;
 }
 .basic-grey h1 {
     font-size: 25px;
@@ -34,6 +51,13 @@
     padding-right: 10px;
     margin-top: 10px;
     color: #888;
+}.basic-grey div.field_with_errors>label {
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    color: #ff0000;
 }
 .basic-grey input[type="text"], .basic-grey input[type="email"], .basic-grey textarea, .basic-grey select {
     border: 1px solid #DADADA;
@@ -51,6 +75,24 @@
     -moz-box-shadow: inset 0px 1px 4px #ECECEC;
     -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
 }
+
+.basic-grey input[type="text"].phone-field{
+    border: 1px solid #DADADA;
+    color: #888;
+    height: 30px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 3px 3px 3px 5px;
+    width: 55%;
+    font-size: 12px;
+    line-height:15px;
+    box-shadow: inset 0px 1px 4px #ECECEC;
+    -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+    -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+
 .basic-grey textarea{
     padding: 5px 3px 3px 5px;
 }

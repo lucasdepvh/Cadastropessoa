@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<div class= "basic-greyedit">
+<h4>Visualizar</h4>
+<hr>
 <p>
   <strong>Name:</strong>
   <%= @contact.name %>
@@ -11,14 +14,14 @@
 </p>
 
 <p>
-  <strong>Kind:</strong>
-  <%= @contact.kind %>
+  <strong>Tipo de Contato:</strong>
+  <%= @contact.kind.description %>
 </p>
 
 <p>
-  <strong>Rmk:</strong>
+  <strong>Obs:</strong>
   <%= @contact.rmk %>
 </p>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<%= link_to 'Fechar', contacts_path %>
+</div>
