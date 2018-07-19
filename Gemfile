@@ -14,6 +14,7 @@ gem 'bootstrap', '~> 4.1', '>= 4.1.1'
 gem 'jquery-rails'
 gem 'faker', '~> 1.9', '>= 1.9.1'
 gem 'cocoon'
+gem 'better_errors', '~> 2.4'
 gem 'kaminari'
 gem 'kaminari-i18n'
 # Use sqlite3 as the database for Active Record

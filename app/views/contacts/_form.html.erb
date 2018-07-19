@@ -1,6 +1,5 @@
   <br>
   <%= form_for(@contact, html: { class: "basic-grey" }) do |f| %>
-
     
     <h1><%= @contact.model_name.human %></h1>
 
@@ -59,15 +58,12 @@
       </div>
     <% end %>
 
-    <div class="field">
-    <div class="form-actions">
     <div class = 'row'>
     <div class = 'col-md-2'>
         <%= button_to contacts_path,class:"btn btn-primary" do  %>
         <span>Salvar</span>
         </div>
         <%end%>  
-
           <%= link_to contacts_path(@contact), class: 'btn btn-default' do %>
               <span>Voltar</span>
             <% end %>

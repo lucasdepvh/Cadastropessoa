@@ -48,7 +48,7 @@ class ContactsController < ApplicationController
         format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
         format.json { render :show, status: :ok, location: @contact }
       else
-        format.html { render :edit }
+        format.html { render :edit, alert: 'Verifique os campos'}
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
@@ -57,12 +57,14 @@ class ContactsController < ApplicationController
   # DELETE /contacts/1
   # DELETE /contacts/1.json
   def destroy
+
+  begin
     @contact.destroy
-    respond_to do |format|
-      format.html { redirect_to contacts_url, notice: 'Contact was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to contacts_url, notice: 'Excluído com sucesso'
+  rescue StandardError
+    redirect_to contacts_url, alert: 'Não excluído, pois está relacionado a uma outra tabela'
   end
+end
 
   private
   
