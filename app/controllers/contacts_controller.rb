@@ -1,4 +1,3 @@
-
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
   before_action :set_options_for_select, only: [:new, :edit, :update, :create]
@@ -6,7 +5,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.order('id DESC').page(params[:page]).per(15)
+    @contacts = Contact.order('id DESC').page(params[:page]).per(20)
   end
 
   # GET /contacts/1
@@ -57,7 +56,6 @@ class ContactsController < ApplicationController
   # DELETE /contacts/1
   # DELETE /contacts/1.json
   def destroy
-
   begin
     @contact.destroy
     redirect_to contacts_url, notice: 'Excluído com sucesso'

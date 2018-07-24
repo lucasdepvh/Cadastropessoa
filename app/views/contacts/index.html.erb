@@ -1,7 +1,7 @@
 <br>
 <div class="basic-grey">
       <h3>
-        <strong>Cadastrados</strong>
+        <strong>Contatos Cadastrados</strong>
       </h3>
       <div class="panel panel-flat">
         <div class="panel-heading">
@@ -18,8 +18,8 @@
                 </p>
                 <% end %>
         </div>
-        <%= link_to 'Novo', new_contact_path %>
 
+        <%= link_to 'Novo', new_contact_path %>
           <table class="table table-bordered">
             <thead>
               <tr>
@@ -55,12 +55,10 @@
                 <% end %>
             </tbody>
       </div>
-    </div>
   </table>
-
-  <div class="panel-footer text-right">
-    <div class="dataTables_paginate paging_simple_numbers pull-left">
+<hr>
+  <div class="text-right">
       <%= paginate @contacts %>
-    </div>
     <%= page_entries_info @contacts %>
   </div>
+    </div>

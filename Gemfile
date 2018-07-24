@@ -9,6 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 gem 'materialize-sass', '~> 0.100.2'
+gem "bower-rails", "~> 0.11.0"
 gem 'rails-i18n', '~> 5.1', '>= 5.1.1'
 gem 'bootstrap', '~> 4.1', '>= 4.1.1'
 gem 'jquery-rails'

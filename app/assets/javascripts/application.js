@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require cocoon
+//= require notifyjs/dist/notify
 //= require_tree .
 //= require jquery3
 //= require popper
