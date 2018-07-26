@@ -2,7 +2,10 @@
   buttons:
     new: Novo
     show: Mostrar
+    save: Salvar
     edit: Editar
     destroy: Apagar
-    button: fechar
+    button: Fechar
+    home: Início
+    back: Fechar
     
