@@ -2,7 +2,7 @@ class Contact < ActiveRecord::Base
   belongs_to :kind
   has_one :address
   has_many :phones
-  
+  paginates_per 15
   #Pra poder apagar os dados relacionados a tabela
   # has_one :address, dependent: :destroy 
   # has_many :phones, dependent: :destroy

@@ -6,9 +6,15 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.order('id DESC').page(params[:page]).per(15)
+    # if params[:busca]
+    #   busca = params[:busca].upcase
+    #   @contacts = Contact.joins(:id, :name).where('UPPER(contact.name ) LIKE :busca', busca: "%#{busca}%").page params[:page]
+    # else
+ 
+    @contacts = Contact.order('id DESC').page params[:page]
+    # end
   end
-
+  
   # GET /contacts/1
   # GET /contacts/1.json
   def show
@@ -80,7 +86,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.require(:contact).permit(:name, :email, :kind_id, :rmk, 
+      params.require(:contact).permit(:busca, :name, :email, :kind_id, :rmk, 
         address_attributes: [:street, :city, :state],
         phones_attributes: [:id, :phone, :_destroy])
     end
