@@ -23,3 +23,5 @@
       phone:
         phone: Telefone
         contact: Contato
+      kind:
+        description: Descrição

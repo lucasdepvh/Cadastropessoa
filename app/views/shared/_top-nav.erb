@@ -1,0 +1,27 @@
+<div class="sidebar sidebar-main sidebar-default">
+  <div class="sidebar-content">
+
+    <!-- Menu container -->
+    <div class="sidebar-category sidebar-category-visible">
+      <div class="category-title h6">
+        <span class="text-bold">Menu Principal</span>
+      </div>
+      <div class="category-content no-padding">
+        <ul class="navigation navigation-main navigation-accordion">
+              <li>
+            <%= link_to contacts_path do %>
+              <i class="glyphicon glyphicon-inbox"></i> <span class="legenda_side_nav">Tipos de Equipamentos</span>
+            <% end %>
+          </li>
+      
+          <li>
+            <%= link_to kinds_path do %>
+              <i class="glyphicon glyphicon-inbox"></i> <span class="legenda_side_nav">Equipamentos</span>
+            <% end %>
+          </li>
+       
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
