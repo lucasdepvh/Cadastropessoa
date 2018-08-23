@@ -11,7 +11,7 @@ gem 'bundler', '>= 1.8.4'
 gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 
 gem 'rails', '~> 5.1.6'
-gem 'materialize-sass', '~> 0.100.2'
+gem 'materialize-sass'
 gem 'rails-i18n', '~> 5.1', '>= 5.1.1'
 gem 'rails-assets-bootstrap', '~> 3.3.7', source: 'http://insecure.rails-assets.org' 
 gem 'jquery-rails'

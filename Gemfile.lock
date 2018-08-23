@@ -225,7 +225,7 @@ DEPENDENCIES
   kaminari
   kaminari-i18n
   listen (>= 3.0.5, < 3.2)
-  materialize-sass (~> 0.100.2)
+  materialize-sass
   puma (~> 3.7)
   rails (~> 5.1.6)
   rails-assets-bootstrap (~> 3.3.7)!
@@ -242,7 +242,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.5.0p0
+   ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.1
+   1.16.3
